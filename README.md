@@ -1,6 +1,6 @@
 # Example11
 
-This is a sample example that addresses few concerns mentioned in this Email 
+This is a sample example that answers few points mentioned in this Email 
 https://lists.isocpp.org/sg15/2023/08/2018.php
 Checked with and links are from this commit latest at the time of writing.
 https://github.com/HassanSajjad-302/HMake/commit/2c14a00a5c6bbd56f862d39fcc6e85f0a3b08a3a
