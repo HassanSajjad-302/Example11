@@ -2,7 +2,7 @@
 
 This is a sample example that addresses few concerns mentioned in this Email 
 https://lists.isocpp.org/sg15/2023/08/2018.php
-Checked with this commit latest at the time of writing.
+Checked with and links are from this commit latest at the time of writing.
 https://github.com/HassanSajjad-302/HMake/commit/2c14a00a5c6bbd56f862d39fcc6e85f0a3b08a3a
 
 
@@ -44,4 +44,22 @@ As, this compile-definition is not defined for the ```main.cpp``` module-file,
 program works as expected.
 
 
+Similarly, we could modify the compile-command of the header-units by modifying the 
+compile-command of the stdhu target.
+As ```iostream``` is determined to be coming from the hu-include of ```stdhu``` target,
+the compile-command of the ```stdhu``` target will be used.
+That is determined here:
+https://github.com/HassanSajjad-302/HMake/blob/2c14a00a5c6bbd56f862d39fcc6e85f0a3b08a3a/hconfigure/src/SMFile.cpp#L456
 
+Specify a unique compile-command for a single file is a bit complex.
+
+You will have to single out such module-file in a new target and not specify in the older target.
+Also, will have to set the module-scope of that new target.
+Now, you can modify the compile-command of this new target.
+
+In-case of header-unit, you will have to single out such a header-unit in a new directory.
+Specify a new target.
+Specify the module-scope of this new target.
+And specify this new directory as hu-include of this new target instead of previous target.
+Specify this new DSC<CppSourceTarget as dependency of previous target.
+Now, you can modify the compile-command of this new target.
