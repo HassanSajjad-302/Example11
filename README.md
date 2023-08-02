@@ -51,15 +51,15 @@ the compile-command of the ```stdhu``` target will be used.
 That is determined here:
 https://github.com/HassanSajjad-302/HMake/blob/2c14a00a5c6bbd56f862d39fcc6e85f0a3b08a3a/hconfigure/src/SMFile.cpp#L456
 
-Specify a unique compile-command for a single file is a bit complex.
+Specifying a unique compile-command for a single file is a bit complex.
 
-You will have to single out such module-file in a new target and not specify in the older target.
-Also, will have to set the module-scope of that new target.
+You will have to single out such a module-file in a new target and not specify in the older target.
+Also, you will have to set the module-scope of this new target.
 Now, you can modify the compile-command of this new target.
 
 In-case of header-unit, you will have to single out such a header-unit in a new directory.
 Specify a new target.
 Specify the module-scope of this new target.
-And specify this new directory as hu-include of this new target instead of previous target.
-Specify this new DSC<CppSourceTarget as dependency of previous target.
+And specify this new directory as hu-include of this new target instead of the previous target.
+Specify this new DSC<CppSourceTarget as a dependency of the previous target.
 Now, you can modify the compile-command of this new target.
