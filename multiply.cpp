@@ -1,5 +1,5 @@
 module;
-export module division;
+export module multiply;
 import <iostream>;
 
 #ifdef MULTIPLY
